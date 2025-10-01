@@ -1,4 +1,4 @@
-package Pract2_Ejer4;
+package Practico2.Ejercicio4;
 
 public class Usuario {
     private String nombre;
@@ -23,5 +23,9 @@ public class Usuario {
 
     public boolean getSocio(){
         return this.socio;
+    }
+
+    public String toString(){
+        return "Nombre: " + this.nombre + " | Socio: " + this.socio;
     }
 }

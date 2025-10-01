@@ -1,4 +1,4 @@
-package Pract2_Ejer3;
+package Practico2.Ejercicio3;
 
 public class index {
     public static void main(String[] args) {

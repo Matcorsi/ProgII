@@ -1,4 +1,4 @@
-package Pract2_Ejer2;
+package Practico2.Ejercicio2;
 import java.util.ArrayList;
 
 public class Reunion {

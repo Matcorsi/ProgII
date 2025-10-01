@@ -1,4 +1,4 @@
-package Pract2_Ejer4;
+package Practico2.Ejercicio4;
 
 public class Cancha {
     private int precio;
@@ -43,6 +43,10 @@ public class Cancha {
 
     public void setDeporte(String deporte){
         this.deporte = deporte;
+    }
+
+    public String toString(){
+        return "Numero cancha: " + this.num_cancha + " | Deporte: " + this.deporte  + " | Precio: " + this.precio  + " | Descripcion: " + this.descripcion;
     }
 
 }

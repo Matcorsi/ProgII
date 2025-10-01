@@ -1,4 +1,4 @@
-package Pract2_Ejer4;
+package Practico2.Ejercicio4;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -56,6 +56,11 @@ public class Turno {
 
     public Cancha getCancha(){
         return this.cancha;
+    }
+
+    public String toString(){
+        return "Id: " + this.id_turno + " | Fecha: " + this.fecha  + " | Hora: " + this.hora + " | Usuario: " + this.usuario
+         + " | Cancha: " + this.cancha;
     }
 
 }

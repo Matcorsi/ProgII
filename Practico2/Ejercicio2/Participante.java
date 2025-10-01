@@ -1,4 +1,4 @@
-package Pract2_Ejer2;
+package Practico2.Ejercicio2;
 
 public class Participante {
     private String nombre;

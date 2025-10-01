@@ -15,7 +15,12 @@ public class Muebleria {
         }
 
         public void listaValoresMuebles(){
-            
+            if (!this.muebles_stock.isEmpty()) {
+                for(int i = 0; i < this.muebles_stock.size(); i++){
+                    Mueble mueble = this.muebles_stock.get(i);
+                    System.out.println("Mueble: " + mueble.getNombre() + " | Precio: " + precioVenta(mueble));
+                }
+            }
         }
 
         public double precioVenta(Mueble mueble){

@@ -1,4 +1,7 @@
-package Pract2_Ejer4;
+package Practico2.Ejercicio4;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Index {
     public static void main(String[] args) {
@@ -14,5 +17,34 @@ public class Index {
         Usuario user1 = new Usuario("Fiorella");
         Usuario user2 = new Usuario("Mateo");
         Usuario user3 = new Usuario("Luis");
+
+        System.out.println(edlp);
+        System.out.println(cancha1);
+        System.out.println(cancha2);
+        System.out.println(cancha3);
+        System.out.println(cancha3);
+        System.out.println(cancha4);
+        System.out.println(cancha5);
+        System.out.println(cancha6);
+        System.out.println(user1);
+        System.out.println(user2);
+        System.out.println(user3);
+
+        Turno turno1 =  new Turno(1, LocalDate.of(2025, 2, 20), LocalTime.of(5, 30, 0), user3, cancha6);
+        edlp.addTurno(turno1);
+        edlp.addSocio(user3);
+        edlp.addSocio(user3);
+
+        System.out.println(edlp);
+        System.out.println(cancha1);
+        System.out.println(cancha2);
+        System.out.println(cancha3);
+        System.out.println(cancha3);
+        System.out.println(cancha4);
+        System.out.println(cancha5);
+        System.out.println(cancha6);
+        System.out.println(user1);
+        System.out.println(user2);
+        System.out.println(user3);
     }
 }
