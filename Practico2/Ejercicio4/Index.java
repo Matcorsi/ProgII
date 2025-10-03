@@ -30,6 +30,10 @@ public class Index {
         System.out.println(user2);
         System.out.println(user3);
 
+        // Para instanciar Fecha y Hora: 
+        // Turno turno1 = new Turno( 1, LocalDate.of(2025, 2, 20), LocalTime.of(5, 30, 0),user3,  cancha6 );
+        //                                            año,mes,día               h,  m, s
+
         Turno turno1 =  new Turno(1, LocalDate.of(2025, 2, 20), LocalTime.of(5, 30, 0), user3, cancha6);
         edlp.addTurno(turno1);
         edlp.addSocio(user3);
