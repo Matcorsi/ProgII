@@ -1,6 +1,5 @@
-package Practico4;
+package Practico3.Ejercicio4;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Celular {
