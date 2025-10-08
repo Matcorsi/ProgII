@@ -36,11 +36,12 @@ public class Empleado {
     }
 
     public double calcularSalario(){
+        System.out.println("Se ejecuto: calcularSalario de Empleado:");
         return this.getSalario();
     }
 
     public void mostrarSalario(){
-        System.out.println("El salario del empleado: " + this.getNombre() + " es de:" + calcularSalario());
+        System.out.println("El salario del empleado: " + this.getNombre() + " es de:" + this.calcularSalario());
     }
 
     

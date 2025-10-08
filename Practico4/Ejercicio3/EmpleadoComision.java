@@ -28,6 +28,7 @@ public class EmpleadoComision extends Empleado{
 
     @Override
     public double calcularSalario(){
+        System.out.println("Se ejecuto: calcularSalario de EmpleadoComision:");
         return this.getSalario() + cantVentas*(porcentaje/100);
     }
 }

@@ -28,6 +28,7 @@ public class EmpleadoHorasExtras extends Empleado{
 
     @Override
     public double calcularSalario(){
+        System.out.println("Se ejecuto: calcularSalario de EmpleadoHorasExtras:");
         return this.getSalario() + montoExtraXHora*horaExtras;
     }
 
