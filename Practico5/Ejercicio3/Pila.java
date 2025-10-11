@@ -13,11 +13,39 @@ public class Pila{
         this.pila.push(elemento);
     }
 
-    public Object obtenerElemento(){
-        return this.pila.pop();
+    public Object pop(){
+        if(pila.isEmpty()){
+            System.out.println("La pila no contiene objetos aun");
+            return null;
+        }
+        return pila.pop();
     }
 
-    public Object verProximo(){
-        return this.pila.peek();
+    public Object top(){
+        if(pila.isEmpty()){
+            System.out.println("La pila no contiene objetos aun");
+            return null;
+        }
+        return pila.peek();
+    }
+
+    public int tamanioPila(){
+        return this.pila.size();
+    }
+
+    public Pila copy(){
+        Pila copia = new Pila();
+        for(Object obj : pila){
+            copia.addElemento(obj);
+        }
+        return copia;
+    }
+
+    public Pila reverse(){
+        Pila copia = new Pila();
+        for(int i = this.pila.size() - 1; i >= 0; i--){
+            copia.addElemento(this.pila.get(i));
+        }
+        return copia;
     }
 }
