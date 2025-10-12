@@ -8,6 +8,7 @@ public class Main {
         gryffindor.addCualidadCasa("Valentía");
         gryffindor.addCualidadCasa("Determinación");
 
+        
         Casa slytherin = new CasaEnemistada("Slytherin", 3);
         slytherin.addCualidadCasa("Ambición");
         slytherin.addCualidadCasa("Astucia");
