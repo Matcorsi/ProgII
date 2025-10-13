@@ -1,46 +1,49 @@
 package Practico5.Ejercicio5;
 
-public class Lote extends Cooperativa{
-    private String tipoLote;
+import java.util.ArrayList;
 
-    public Lote(String nombre){
-        super(nombre);
-        this.tipoLote = setTipo();
+public class Lote {
+
+    private String nombre;
+    private double superficie;
+    private ArrayList<Mineral> minerales;
+
+    public Lote(String nombre, double superficie){
+        this.nombre = nombre;
+        this.superficie = superficie;
+        this.minerales = new ArrayList<>();
     }
 
-    public String tipoDeLote(){
-        return this.tipoLote;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String setTipo(){
-        if(esEspecial()){
-            return "Especial";
-        }
-        if(esComun()){
-            return "Comun";
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getSuperficie() {
+        return superficie;
+    }
+
+    public void setSuperficie(double superficie) {
+        this.superficie = superficie;
+    }
+
+    public ArrayList<Mineral> getMinerales() {
+        return minerales;
+    }
+
+    public void addMineral(Mineral mineral) {
+        this.minerales.add(mineral);
+    }
+
+    public boolean puedeSembrar(Cereal cereal){
+        if(cereal.getMinerales().containsAll(minerales)){
+            return true;
         } else {
-            return null;
+            return false;
         }
-    }
-
-    public boolean esEspecial(){
-        boolean esEspecial = true;
-        for(String min : minerales){
-            if(!(super.getMineralesPrimarios().contains(min))){
-                esEspecial = false;
-            } 
-        }
-        return esEspecial;
-    }
-
-    public boolean esComun(){
-        boolean esComun = true;
-        for(String min : minerales){
-            if (!(super.getMineralesSecundarios().contains(min))) {
-                esComun = false;
-            }
-        }
-        return esComun;
     }
 
 }
