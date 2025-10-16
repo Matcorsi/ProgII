@@ -1,6 +1,5 @@
 package Practico6.Ejercicio2;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class CentroComputos {
