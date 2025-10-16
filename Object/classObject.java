@@ -8,22 +8,15 @@ public class classObject {
         Camiseta camiseta1 = new Camiseta("Estudiantes", 500, 11);
         Objeto pelota1 = new Pelota("Tango",200,15.0);
 
-        System.out.println(pelota.equals(pelota1));
-        System.out.println(camiseta1.equals(camiseta));
+        System.out.println("La pelota es la misma que la pelota1: " + pelota.equals(pelota1));
+        System.out.println("La camiseta1 es la misma que la camiseta: " + camiseta1.equals(camiseta));
 
 
         pelota1 = pelota;
-
         camiseta1.setDorsal(10);
 
-        System.out.println(pelota.equals(pelota1));
-        System.out.println(camiseta1.equals(camiseta));
-
-
-        String string1 = new String("Hello");
-        String string2 = new String("Hello");
-        System.out.println(string1.equals(string2));
-
+        System.out.println("La pelota es la misma que la pelota1: " + pelota.equals(pelota1));
+        System.out.println("La camiseta1 es la misma que la camiseta: " + camiseta1.equals(camiseta));
 
         String palabra1 = "Nylon";
         String palabra2 = "Confort";
@@ -34,6 +27,7 @@ public class classObject {
         System.out.println("La palabra 1 es la misma que la 3: " +  palabra1.equals(palabra3));
         System.out.println("La palabra 1 es la misma que la 2: " +  palabra1.equals(palabra2));
         System.out.println("La palabra 1 es la misma que la 3: " +  (palabra1 == palabra3));
+        System.out.println("La palabra Ventilacion contiene 'cion': " +  (palabra4.contains("cion")));
         
 
         camiseta.addCaracteristica(palabra4);
