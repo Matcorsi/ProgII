@@ -1,5 +1,10 @@
 package Practico5.Ejercicio3;
 
+// stack.push(5);    // Pila: [5]
+// stack.push(10);   // Pila: [5, 10]
+// int top = stack.peek(); // top = 10, pila sigue: [5, 10] -- Con peek toma el elemento superior de la pila
+// int removed = stack.pop(); // removed = 10, pila ahora: [5] -- Con pop toma el elemento superior de la pila y lo elimina
+
 import java.util.Stack;
 
 public class Pila{
