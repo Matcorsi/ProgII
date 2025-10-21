@@ -8,9 +8,9 @@ public class Cliente {
     private String dni;
     private String direccion;
     private int descuento;
-    protected ArrayList<String> autoresFavoritos;
-    protected ArrayList<String> generosFavoritos;
-    protected ArrayList<Articulo> listaCompras;
+    private ArrayList<String> autoresFavoritos;
+    private ArrayList<String> generosFavoritos;
+    private ArrayList<Articulo> listaCompras;
 
     public Cliente(String nombre, String apellido, String dni, String direccion, int descuento){
         this.nombre = nombre;
