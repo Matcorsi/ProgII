@@ -10,7 +10,7 @@ public class Main {
         Ficha piedra = new Ficha(6,1,0);
         Ficha carameloRayas = new Ficha(1,1,10);
         Ficha torta = new Ficha(8,4,4);
-        FichaEspecial fichaEspecial = new FichaEspecial(9,3,0); // poder calculado = 3
+        FichaEspecial fichaEspecial = new FichaEspecial(9,3,0);
 
         tablero.addFicha(chocolate);
         tablero.addFicha(piedra);
