@@ -29,13 +29,17 @@ public abstract class ElementoPostal {
         this.codigo_seguimiento = codigo_seguimiento;
     }
 
-    public abstract String getDirec_destinatario();
+    public String getDirec_destinatario(){
+        return direc_destinatario;
+    };
 
     public void setDirec_destinatario(String direc_destinatario) {
         this.direc_destinatario = direc_destinatario;
     }
 
-    public abstract String getDirec_remitente();
+    public String getDirec_remitente(){
+        return direc_remitente;
+    };
 
     public void setDirec_remitente(String direc_remitente) {
         this.direc_remitente = direc_remitente;

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class ComboPostal extends ElementoPostal{
     private ArrayList<ElementoPostal> envios;
-    private String ciudad_destino;
 
     public ComboPostal(String codigo, String ciudad_destino, String direc_destinatario, String direc_remitente){
         super(codigo, ciudad_destino, codigo, ciudad_destino);
@@ -16,13 +15,10 @@ public class ComboPostal extends ElementoPostal{
     }
 
     public void addPaquete(ElementoPostal envio) {
-        if(envio.getCiudad_destino().equals(ciudad_destino)){
+        if(envio.getCiudad_destino().equals(this.getCiudad_destino())){
             if(!envios.contains(envio)){
                 envios.add(envio);
-                for(ElementoPostal elem : envios){
-                    elem.setCodigo_seguimiento(this.getCodigo_seguimiento());
-
-                }
+                envio.setCodigo_seguimiento(this.getCodigo_seguimiento());
             }
         } else {
             System.out.println("No tiene la misma ciudad de destino");
@@ -36,6 +32,26 @@ public class ComboPostal extends ElementoPostal{
         }
         return pesoTotal;
     }
+
+    @Override
+    public String getDirec_destinatario(){
+        return envios.get(0).getDirec_destinatario();
+    }
+
+    @Override
+    public String getDirec_remitente(){
+        return envios.get(0).getDirec_remitente();
+    }
+
+    @Override
+    public void setCodigo_seguimiento(String codigo){
+        super.setCodigo_seguimiento(codigo);
+        for(ElementoPostal elem : envios){
+            elem.setCodigo_seguimiento(codigo);
+        }
+    }
+
+
 
 
 
