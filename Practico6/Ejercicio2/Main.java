@@ -16,7 +16,7 @@ public class Main {
         // Ahora agrego computadoras
         centro.addComputadora(new Computadora("PC1", 2.0));
         centro.addComputadora(new Computadora("PC2", 2.5));
-        centro .addComputadora(compu1);
+        centro.addComputadora(compu1);
 
         centro.ejecutar(proceso1);
 

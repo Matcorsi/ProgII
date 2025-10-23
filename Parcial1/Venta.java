@@ -57,5 +57,9 @@ public class Venta {
         this.cantidad = cantidad;
     }
 
+    public double ganancias(){
+        return getMonto() * getCantidad();
+    }
+
     
 }

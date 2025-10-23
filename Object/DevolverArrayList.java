@@ -6,4 +6,7 @@ public class DevolverArrayList {
     //     aux.addAll(generos);
     //     return aux;
     // }
+
+    // Devolver el arraylist directamente rompe un poco el encapsulamiento, y crear una copia,
+    // ocupa mas espacio en memoria.
 }

@@ -2,25 +2,16 @@ package Parcial1;
 
 import java.util.ArrayList;
 
-public class Vendedor {
-    private String nombre;
+public class Vendedor extends Trabajador{
     private String apellido;
     private int edad;
     private ArrayList<Venta> lista_ventas;
 
     public Vendedor(String nombre, String apellido, int edad){
-        this.nombre = nombre;
+        super(nombre);
         this.apellido = apellido;
         this.edad = edad;
         this.lista_ventas = new ArrayList<>();
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getApellido() {
@@ -45,6 +36,15 @@ public class Vendedor {
 
     public void addLista_ventas(Venta venta) {
         this.lista_ventas.add(venta);
+    }
+
+    @Override
+    public double totalGanancias(){
+        double total = 0;
+        for(Venta venta : lista_ventas){
+            total += venta.ganancias();
+        }
+        return total;
     }
 
     
