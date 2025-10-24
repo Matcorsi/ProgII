@@ -26,6 +26,10 @@ public class TareaCompuesta extends Tarea{
         this.especialidad = especialidad;
     }
 
+    public ArrayList<Tarea> listaTareas(){
+        return new ArrayList<>(tareas);
+    }
+
     @Override
     public int getCosto(){
         int total = 0;
@@ -51,6 +55,15 @@ public class TareaCompuesta extends Tarea{
             tareasCopia.addAll(tt.getTareas());
         }
         return tareasCopia;
+    }
+
+    @Override
+    public int contarTareasSimples(){
+        int cantidad = 0;
+        for(Tarea tt : tareas){
+            cantidad += tt.contarTareasSimples();
+        }
+        return cantidad;
     }
 
     public String toString(){

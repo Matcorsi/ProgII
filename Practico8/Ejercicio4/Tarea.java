@@ -14,6 +14,8 @@ public abstract class Tarea {
 
     public abstract ArrayList<String> getTareas();
 
+    public abstract int contarTareasSimples();
+
     public String getNombre() {
         return nombre;
     }
