@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Empresa {
     private String nombre;
-    private ArrayList<Trabajador> empleados;
+    private ArrayList<Empleado> empleados;
 
     public Empresa(String nombre){
         this.nombre = nombre;
@@ -19,20 +19,11 @@ public class Empresa {
         this.nombre = nombre;
     }
 
-    public ArrayList<Trabajador> getEmpleados() {
-        return empleados;
+    public void addEmpleado(Empleado empleado){
+        if(!empleados.contains(empleado)){
+            empleados.add(empleado);
+        }
     }
-
-    public void addEmpleados(Trabajador ee) {
-        this.empleados.add(ee);
-    }
-
-    public ArrayList<Vendedor> rankingVendedores(){
-        ArrayList<Vendedor> ranking = new ArrayList<>();
-        return ranking;
-    }
-
-    
 
     
 }

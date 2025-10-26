@@ -5,14 +5,14 @@ import java.time.LocalDate;
 public class Venta {
     private LocalDate fecha;
     private String codigo;
-    private String dni_comprador;
+    private String dni;
     private double monto;
     private int cantidad;
 
-    public Venta(LocalDate fecha, String codigo, String dni_comprador, double monto, int cantidad){
-        this.fecha = fecha;
+    public Venta(String codigo, String dni, double monto, int cantidad){
+        this.fecha = LocalDate.now();
         this.codigo = codigo;
-        this.dni_comprador = dni_comprador;
+        this.dni = dni;
         this.monto = monto;
         this.cantidad = cantidad;
     }
@@ -33,12 +33,12 @@ public class Venta {
         this.codigo = codigo;
     }
 
-    public String getDni_comprador() {
-        return dni_comprador;
+    public String getDni() {
+        return dni;
     }
 
-    public void setDni_comprador(String dni_comprador) {
-        this.dni_comprador = dni_comprador;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public double getMonto() {
@@ -58,7 +58,7 @@ public class Venta {
     }
 
     public double ganancias(){
-        return getMonto() * getCantidad();
+        return monto * cantidad;
     }
 
     
