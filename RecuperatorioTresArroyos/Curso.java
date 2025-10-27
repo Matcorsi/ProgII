@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Curso extends Paquete{
     private double precio;
-    private ArrayList<String> docentes;
     private int cantidad_horas;
+    private ArrayList<String> docentes;
     private ArrayList<String> palabras_clave;
 
     public Curso(String nombre, double precio, int cantidad_horas){
@@ -30,6 +30,10 @@ public class Curso extends Paquete{
         }
     }
 
+    public ArrayList<String> getDocentes(){
+        return new ArrayList<>(docentes);
+    }
+
     public int getCantidad_horas() {
         return cantidad_horas;
     }
@@ -44,8 +48,9 @@ public class Curso extends Paquete{
         }
     }
 
-    public boolean contienePalabraClave(String palabra){
-        return palabras_clave.contains(palabra);
+    @Override
+    public ArrayList<String> getPalabrasClave(){
+        return new ArrayList<>(palabras_clave);
     }
 
     public boolean contieneDocente(String docente){
@@ -58,8 +63,29 @@ public class Curso extends Paquete{
     }
 
     @Override
-    public Paquete cursoMasCaro() {
+    public Curso cursoMasCaro() {
         return this;
+    }
+
+    @Override
+    public ArrayList<Curso> buscar(Condicion cond){
+        ArrayList<Curso> retorno = new ArrayList<>();
+        if(cond.cumple(this)){
+            retorno.add(this);
+        }
+        return retorno;
+    }
+
+    @Override
+    public Paquete getCopia(){
+        Curso copiaCurso = new Curso(getNombre(), getPrecio(), getCantidad_horas());
+        for(String docente : docentes){
+            copiaCurso.addDocente(docente);
+        }
+        for(String palabra : palabras_clave){
+            copiaCurso.addPalabra_clave(palabra);
+        }
+        return copiaCurso;
     }
 
     

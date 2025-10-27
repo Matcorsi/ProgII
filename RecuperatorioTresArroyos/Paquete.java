@@ -1,19 +1,12 @@
 package RecuperatorioTresArroyos;
 
+import java.util.ArrayList;
+
 public abstract class Paquete {
-    private static int tope;
     private String nombre;
 
     public Paquete(String nombre){
         this.nombre = nombre;
-    }
-
-    public static void setTope(int valor){
-        tope = valor;
-    }
-
-    public static int getTope() {
-        return tope;
     }
 
     public String getNombre() {
@@ -24,10 +17,14 @@ public abstract class Paquete {
         this.nombre = nombre;
     }
 
-    public abstract boolean contienePalabraClave(String palabra);
-
     public abstract double getPrecio();
+    public abstract int getCantidad_horas();
+    public abstract ArrayList<String> getDocentes();
+    public abstract ArrayList<String> getPalabrasClave();
     public abstract int cantidad();
-    public abstract Paquete cursoMasCaro();
+    public abstract Curso cursoMasCaro();
+    public abstract ArrayList<Curso> buscar(Condicion cond);
+
+    public abstract Paquete getCopia();
 
 }

@@ -9,6 +9,6 @@ public class CondContienePalabraClave implements Condicion{
 
     @Override
     public boolean cumple(Paquete elem){
-        return elem.contienePalabraClave(palabra);
+        return elem.getPalabrasClave().contains(palabra);
     }
 }

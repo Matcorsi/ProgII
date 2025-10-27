@@ -1,5 +1,7 @@
 package Practico9.Ejercicio2;
 
+import java.util.ArrayList;
+
 public class Pista extends Coleccion{
     private static int contador = 0;
     private int id;
@@ -75,6 +77,15 @@ public class Pista extends Coleccion{
     @Override
     public double duracionTotal(){
         return duracion;
+    }
+
+    @Override
+    public ArrayList<Coleccion> buscar(Condicion cond){
+        ArrayList<Coleccion> retorno = new ArrayList<>();
+        if(cond.cumple(this)){
+            retorno.add(this);
+        }
+        return retorno;
     }
 
 }

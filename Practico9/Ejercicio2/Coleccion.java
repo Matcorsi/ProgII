@@ -46,9 +46,7 @@ public abstract class Coleccion {
     public ArrayList<Coleccion> buscar(Condicion cond){
         ArrayList<Coleccion> retorno = new ArrayList<>();
         for(Coleccion elem : elementos){
-            if(cond.cumple(elem)){
-                retorno.add(elem);
-            }
+            retorno.addAll(elem.buscar(cond));
         }
         return retorno;
     }
